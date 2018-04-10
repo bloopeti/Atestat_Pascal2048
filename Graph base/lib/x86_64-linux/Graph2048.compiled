@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1397983219"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi &quot;-Fi/home/bloopeti/Pascal/2048/Graph base/lib/x86_64-linux&quot; &quot;-Fu/home/bloopeti/Pascal/2048/Graph base/&quot; &quot;-FU/home/bloopeti/Pascal/2048/Graph base/lib/x86_64-linux/&quot; -l Graph2048.pas"/>
+  <Complete Value="False"/>
+</CONFIG>

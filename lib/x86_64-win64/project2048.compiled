@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="D:\lazarus\fpc\2.6.4\bin\x86_64-win64\fpc.exe" Date="1162576828"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -FiD:\lazarus\2048\lib\x86_64-win64 -FuD:\lazarus\2048\ -FUD:\lazarus\2048\lib\x86_64-win64\ -l project2048.pas"/>
+</CONFIG>

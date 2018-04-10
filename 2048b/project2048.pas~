@@ -1,0 +1,79 @@
+program project2048;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Classes
+  { you can add units after this };
+
+type
+  vektor= array[1..16] of word;
+
+var
+  i: integer;
+  a: vektor;
+
+{ket szam osszege}
+function sum(x,y:word): word;
+  begin
+    sum:=x+y;
+  end;
+
+{tabla inicializalasa}
+procedure init(var a:vektor);
+  var i:byte;
+  begin
+    for i:=1 to 16 do
+      a[i]:=0;
+  end;
+
+{uj random szam(2/4) generalasa}
+function randNo(): byte;
+  begin
+    randNo:=((random(2)+1)*2);
+  end;
+
+{a fenti random szam poziciojanak generalasa}
+function randPos(): byte;
+  begin
+    randPos:=(random(15)+1);
+  end;
+
+{uj elem(2/4) helyezese a tablara}
+procedure ins(var a:vektor);
+  var n:byte;
+  begin
+    randomize;
+    n:=randPos();
+    while a[n]<>0 do
+      begin
+        n:=randPos();
+                 {write(n,' ');}
+      end;
+    a[n]:=randNo;
+                 {writeln;}
+  end;
+
+{jatek kezdeti allapota
+  friss tabla 2 elemmel}
+procedure newG();
+
+begin
+  init(a);
+  ins(a);
+  ins(a);
+end;
+
+{foprogram}
+begin
+  newG;
+  for i:=1 to 16 do
+    begin
+      if(i mod 4 = 1) and (i<>1) then
+        writeln;
+      write(a[i],' ');
+    end;
+end.
